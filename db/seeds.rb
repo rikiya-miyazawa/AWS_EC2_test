@@ -1,7 +1,9 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+number = 0
+
+  0.upto(19) do
+    number += 1
+    Blog.create!(
+      title: 'AWS EC2_test_title' + number.to_s, 
+      content: 'AWS EC2_test_content' + number.to_s, 
+    )
+  end
